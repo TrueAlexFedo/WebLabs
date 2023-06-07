@@ -1,0 +1,16 @@
+version: '2'
+# Список наших контейнеров, следом сами контейнеры
+services:
+    nginx:
+        image: nginx:latest
+        ports:
+        - "8080:80"
+        volumes:
+        - ./code:/code
+        - ./site.conf:/etc/nginx/conf.d/site.conf
+        links:
+        - php
+    php:
+        image: php:8-fpm
+        volumes:
+        - .code:/code
