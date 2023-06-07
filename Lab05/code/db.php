@@ -9,7 +9,7 @@ if (isset($_POST))
 
 }
 
-$mysqli = new mysqli('db', 'root', 'helloworld', 'w');
+$mysqli = new mysqli('db', 'root', 'qwerty', 'w');
 
 if (mysqli_connect_errno())
 {
